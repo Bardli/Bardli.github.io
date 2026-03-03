@@ -8,7 +8,7 @@ middle_name:
 last_name: Li
 contact_note: Feel free to reach out via email — I'm always open to collaboration and new opportunities.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Baidu Li's personal website — Machine Learning, Data Science, and Biomedical Engineering.
+  Baidu Li — ML Engineer advancing the frontiers of Medical AI
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.

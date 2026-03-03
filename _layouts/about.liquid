@@ -46,6 +46,38 @@ layout: default
       </div>
     {% endif %}
 
+    <!-- Impact Stats -->
+    {% if page.impact_stats and page.impact_stats.enabled %}
+      <div class="fancy-section scroll-reveal">
+        <h2 class="fancy-section-heading">Impact</h2>
+        {% include impact_stats.liquid %}
+      </div>
+    {% endif %}
+
+    <!-- Journey Timeline -->
+    {% if page.timeline and page.timeline.enabled %}
+      <div class="fancy-section scroll-reveal">
+        <h2 class="fancy-section-heading">Journey</h2>
+        {% include timeline.liquid %}
+      </div>
+    {% endif %}
+
+    <!-- Featured Work -->
+    {% if page.featured_projects and page.featured_projects.enabled %}
+      <div class="fancy-section scroll-reveal">
+        <h2 class="fancy-section-heading">Featured Work</h2>
+        {% include featured_projects.liquid %}
+      </div>
+    {% endif %}
+
+    <!-- Education -->
+    {% if page.education and page.education.enabled %}
+      <div class="fancy-section scroll-reveal">
+        <h2 class="fancy-section-heading">Education</h2>
+        {% include education.liquid %}
+      </div>
+    {% endif %}
+
     <!-- Skills -->
     {% if page.skills and page.skills.enabled %}
       <div class="fancy-section scroll-reveal">

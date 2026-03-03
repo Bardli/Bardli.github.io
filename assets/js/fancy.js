@@ -138,11 +138,11 @@
   if (!el) return;
 
   var words = [
-    'Machine Learning',
-    'Data Science',
-    'Software Engineering',
-    'Biomedical Engineering',
-    'Compliance',
+    'Medical AI',
+    'Computer Vision',
+    'NLP & Agentic Systems',
+    'Code Running in Space',
+    '3D Medical Imaging',
   ];
   var wordIndex = 0;
   var charIndex = 0;
@@ -200,5 +200,84 @@
 
   targets.forEach(function (t) {
     observer.observe(t);
+  });
+})();
+
+// ---------------------------------------------------------------------------
+// Counter Animation
+// ---------------------------------------------------------------------------
+(function () {
+  var counters = document.querySelectorAll('.stat-number[data-count]');
+  if (!counters.length) return;
+
+  var duration = 2000;
+
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var start = null;
+
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      var progress = Math.min((timestamp - start) / duration, 1);
+      // Ease-out cubic: 1 - (1 - t)^3
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = Math.round(eased * target);
+      el.textContent = current + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach(function (el) {
+    observer.observe(el);
+  });
+})();
+
+// ---------------------------------------------------------------------------
+// Staggered Reveal
+// ---------------------------------------------------------------------------
+(function () {
+  var items = document.querySelectorAll('.stagger-reveal');
+  if (!items.length) return;
+
+  items.forEach(function (el, index) {
+    if (!el.getAttribute('data-delay')) {
+      el.setAttribute('data-delay', index * 150);
+    }
+  });
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var delay = parseInt(entry.target.getAttribute('data-delay'), 10) || 0;
+          setTimeout(function () {
+            entry.target.classList.add('revealed');
+          }, delay);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  items.forEach(function (el) {
+    observer.observe(el);
   });
 })();
