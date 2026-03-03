@@ -16,7 +16,7 @@ layout: default
         >
       {% endif %}
 
-      <h1 class="hero-name">
+      <h1 class="hero-name" id="hero-name">
         {% if site.title == 'blank' %}
           {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
         {% else %}
@@ -25,7 +25,7 @@ layout: default
       </h1>
 
       {% if page.subtitle %}
-        <p class="hero-subtitle">{{ page.subtitle }}</p>
+        <p class="hero-subtitle shiny-text">{{ page.subtitle }}</p>
       {% endif %}
 
       <div class="typing-container">
@@ -40,7 +40,7 @@ layout: default
     {% if content != blank %}
       <div class="fancy-section scroll-reveal">
         <h2 class="fancy-section-heading">About</h2>
-        <div class="fancy-bio-card">
+        <div class="fancy-bio-card glare-card spotlight-card">
           {{ content }}
         </div>
       </div>
@@ -129,4 +129,5 @@ layout: default
       {% include newsletter.liquid center=true %}
     {% endif %}
   </article>
+  <canvas id="click-spark-canvas"></canvas>
 </div>

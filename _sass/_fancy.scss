@@ -224,6 +224,12 @@ code, pre, .code {
     box-shadow: var(--fancy-shadow-hover);
   }
 
+  // Ensure content sits above spotlight/glare pseudo-element overlays
+  > * {
+    position: relative;
+    z-index: 3;
+  }
+
   p {
     color: var(--fancy-text);
     line-height: 1.8;
@@ -432,7 +438,7 @@ html[data-theme="dark"] {
   gap: 2rem;
 }
 
-.stat-item {
+.star-border-inner {
   text-align: center;
   padding: 1.5rem 1rem;
 }
@@ -575,10 +581,9 @@ html[data-theme="dark"] .timeline-date {
   padding: 1.75rem;
   border-top: 3px solid var(--fancy-accent);
   box-shadow: var(--fancy-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-4px);
     box-shadow: var(--fancy-shadow-hover);
   }
 }
@@ -703,5 +708,265 @@ html[data-theme="dark"] .education-gpa {
   &.revealed {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// ShinyText — sweeping light shimmer on subtitle
+// ---------------------------------------------------------------------------
+.hero-subtitle.shiny-text {
+  color: transparent;
+  background: linear-gradient(
+    120deg,
+    var(--fancy-hero-text-muted) 0%,
+    var(--fancy-hero-text-muted) 40%,
+    var(--fancy-hero-text) 50%,
+    var(--fancy-hero-text-muted) 60%,
+    var(--fancy-hero-text-muted) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shiny-sweep 4s ease-in-out infinite;
+}
+
+@keyframes shiny-sweep {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+// ---------------------------------------------------------------------------
+// GlitchText — chromatic aberration + shake on hero name hover
+// ---------------------------------------------------------------------------
+.glitch-hover {
+  cursor: pointer;
+  transition: text-shadow 0.2s ease;
+
+  &:hover {
+    animation: glitch-shake 0.15s infinite;
+    text-shadow:
+      3px 0 rgba(0, 210, 255, 0.7),
+      -3px 0 rgba(255, 64, 129, 0.7);
+  }
+}
+
+@keyframes glitch-shake {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+}
+
+// ---------------------------------------------------------------------------
+// SpotlightCard — radial gradient follows cursor
+// ---------------------------------------------------------------------------
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y),
+      rgba(99, 102, 241, 0.1),
+      transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    border-radius: inherit;
+    z-index: 2;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+html[data-theme="dark"] .spotlight-card::after {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(0, 210, 255, 0.12),
+    transparent 40%
+  );
+}
+
+// ---------------------------------------------------------------------------
+// 3D Tilt Card — perspective transform on mouse move
+// ---------------------------------------------------------------------------
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+// ---------------------------------------------------------------------------
+// GlareHover — diagonal light sweep on hover
+// ---------------------------------------------------------------------------
+.glare-card {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      -45deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.06) 50%,
+      transparent 60%
+    );
+    background-size: 300% 300%;
+    background-position: 100% 100%;
+    transition: background-position 0.7s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+  }
+
+  &:hover::before {
+    background-position: 0% 0%;
+  }
+}
+
+html[data-theme="dark"] .glare-card::before {
+  background: linear-gradient(
+    -45deg,
+    transparent 40%,
+    rgba(0, 210, 255, 0.06) 50%,
+    transparent 60%
+  );
+  background-size: 300% 300%;
+  background-position: 100% 100%;
+}
+
+// ---------------------------------------------------------------------------
+// StarBorder — animated glowing border on stat items
+// ---------------------------------------------------------------------------
+.star-border {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  padding: 2px;
+
+  .star-border-inner {
+    position: relative;
+    background: var(--fancy-card-bg);
+    border-radius: 12px;
+    z-index: 1;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 50%;
+    opacity: 0.7;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  &::before {
+    top: -12px;
+    left: -250%;
+    background: radial-gradient(circle, var(--fancy-accent), transparent 10%);
+    animation: star-move-top 6s linear infinite alternate;
+  }
+
+  &::after {
+    bottom: -12px;
+    right: -250%;
+    background: radial-gradient(circle, var(--fancy-cyan), transparent 10%);
+    animation: star-move-bottom 6s linear infinite alternate;
+  }
+}
+
+@keyframes star-move-top {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes star-move-bottom {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
+
+// ---------------------------------------------------------------------------
+// ClickSpark — global click spark canvas overlay
+// ---------------------------------------------------------------------------
+#click-spark-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+// ---------------------------------------------------------------------------
+// Magnetic Hover — elements pull toward cursor
+// ---------------------------------------------------------------------------
+.magnetic {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+// ---------------------------------------------------------------------------
+// SplitText — character-by-character heading reveal
+// ---------------------------------------------------------------------------
+.split-heading {
+  .split-char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  &.split-revealed .split-char {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Reduced Motion — respect user preference
+// ---------------------------------------------------------------------------
+@media (prefers-reduced-motion: reduce) {
+  .shiny-text {
+    animation: none !important;
+  }
+
+  .glitch-hover:hover {
+    animation: none !important;
+    text-shadow: none !important;
+  }
+
+  .scroll-reveal,
+  .stagger-reveal,
+  .split-heading .split-char {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .star-border::before,
+  .star-border::after {
+    animation: none !important;
+  }
+
+  .tilt-card {
+    transform: none !important;
   }
 }
