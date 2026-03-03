@@ -6,10 +6,9 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Baidu
 middle_name:
 last_name: Li
-contact_note: Please reach out to me via Email
-  # You can even add a little note about which of these is the best way to reach you.
+contact_note: Feel free to reach out via email — I'm always open to collaboration and new opportunities.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Baidu Li's personal website — Machine Learning, Data Science, and Biomedical Engineering.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -263,8 +262,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Li]
+  first_name: [Baidu, B.]
 
   style: apa
   locale: en
