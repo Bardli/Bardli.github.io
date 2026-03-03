@@ -25,6 +25,13 @@
 
   var particleRGB = getParticleColor();
 
+  function isDarkTheme() {
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+
+  var dotOpacity = isDarkTheme() ? 0.6 : 0.35;
+  var lineOpacityMul = isDarkTheme() ? 0.3 : 0.15;
+
   function resize() {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
@@ -72,7 +79,7 @@
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(' + particleRGB + ', 0.6)';
+      ctx.fillStyle = 'rgba(' + particleRGB + ',' + dotOpacity + ')';
       ctx.fill();
 
       // Draw connections
@@ -85,7 +92,7 @@
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = 'rgba(' + particleRGB + ',' + (1 - d / maxDist) * 0.3 + ')';
+          ctx.strokeStyle = 'rgba(' + particleRGB + ',' + (1 - d / maxDist) * lineOpacityMul + ')';
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -108,9 +115,11 @@
 
   window.addEventListener('resize', resize);
 
-  // Re-read particle color on theme toggle
+  // Re-read particle color and opacity on theme toggle
   var observer = new MutationObserver(function () {
     particleRGB = getParticleColor();
+    dotOpacity = isDarkTheme() ? 0.6 : 0.35;
+    lineOpacityMul = isDarkTheme() ? 0.3 : 0.15;
   });
   observer.observe(document.documentElement, {
     attributes: true,
