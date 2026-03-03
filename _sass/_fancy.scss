@@ -65,8 +65,9 @@ code, pre, .code {
 // ---------------------------------------------------------------------------
 .fancy-hero {
   position: relative;
-  width: calc(100vw - (100vw - 100%));
-  margin-left: calc(-1 * (100vw - 100%) / 2);
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
   min-height: 80vh;
   display: flex;
   align-items: center;
