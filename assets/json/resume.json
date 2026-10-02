@@ -1,200 +1,179 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
-    "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
-    "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
-    },
+    "name": "Baidu Li",
+    "label": "Machine Learning Engineer · Medical AI",
+    "email": "baidu_li_2001@163.com",
+    "url": "https://bardli.github.io/",
+    "summary": "Biomedical engineering and computer science background, with experience in 3D medical imaging, foundation-model evaluation, LLM agents, RAG, and research automation.",
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "GitHub",
+        "username": "Bardli",
+        "url": "https://github.com/Bardli"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "baidu-li",
+        "url": "https://www.linkedin.com/in/baidu-li/"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "name": "UHN AI Hub — University Health Network",
+      "position": "Machine Learning Engineer",
+      "url": "https://www.uhn.ca/",
+      "location": "Toronto, Canada",
+      "startDate": "2025-11",
+      "summary": "Medical imaging, foundation-model evaluation, and agent-driven research workflows.",
+      "highlights": [
+        "Coordinator for the CVPR 2026 3D CT Foundation Model (3DCTFM) competition. Worked on cross-anatomy CT benchmarking, including data preparation and splits, model execution, metrics, automated evaluation scripts, and result and error analysis.",
+        "Developed a Multi-Head nnU-Net framework for complex 3D tumor segmentation.",
+        "Built an nnU-Net data-conversion agent and an HPC cluster-management tool for Slurm job execution on Compute Canada.",
+        "Contributing to a clinical-note generation prototype that combines referral letters, patient information, and processed text conversations. My work focuses on the text-conversation input."
+      ]
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "SpringBorne Life Science",
+      "position": "Compliance Specialist Intern",
+      "url": "https://www.springborne.com/",
+      "location": "Toronto, Canada",
+      "startDate": "2025-04",
+      "endDate": "2025-09",
+      "summary": "AI/ML medical-device guidance, software validation, and documentation automation.",
+      "highlights": [
+        "Authored guidance on AI/ML-enabled medical devices, covering risk management, algorithm selection, and mitigation strategies in the context of FDA draft guidance and ISO standards.",
+        "Developed software validation plans to support work involving ISO 13485 and 21 CFR Part 11.",
+        "Implemented a Neo4j document relationship network for design control and developed a no-code AI platform for standardized compliance-report generation."
+      ]
+    },
+    {
+      "name": "XtalPi",
+      "position": "Algorithm Engineer Intern",
+      "url": "https://www.xtalpi.com/",
+      "location": "Beijing, China",
+      "startDate": "2024-05",
+      "endDate": "2024-09",
+      "summary": "Agent toolsets and RAG workflows for life-sciences research.",
+      "highlights": [
+        "Extended the Dify agent framework with tools for research literature review and data analysis.",
+        "Processed and cleaned RAG datasets and built domain-specific retrieval workflows with Dify and PostgreSQL.",
+        "Designed an agent toolset framework to connect research tasks with reusable tools."
+      ]
+    },
+    {
+      "name": "York University",
+      "position": "Research Assistant",
+      "url": "https://www.yorku.ca/",
+      "location": "Toronto, Canada",
+      "startDate": "2023-05",
+      "endDate": "2023-09",
+      "summary": "Deep learning for software testing, advised by Dr. Song Wang.",
+      "highlights": ["Led a team developing a deep-learning approach to improve the efficiency of a fuzz-testing framework."]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "University of Toronto",
+      "area": "Biomedical Engineering",
+      "studyType": "Master of Engineering",
+      "startDate": "2024-09",
+      "endDate": "2025-09",
+      "url": "https://www.utoronto.ca/",
+      "location": "Toronto, Canada",
+      "courses": ["Medical imaging", "Machine learning", "Biosignal processing", "Medical-device regulation"]
+    },
+    {
+      "institution": "York University",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science",
+      "startDate": "2019-09",
+      "endDate": "2024-06",
+      "score": "3.56 / 4.0 · First Class",
+      "url": "https://www.yorku.ca/",
+      "location": "Toronto, Canada",
+      "courses": ["Computer vision", "Algorithms", "Computer systems", "Natural language processing"]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
-    }
-  ],
-  "skills": [
-    {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "title": "autoPET V — 3rd place in both tasks",
+      "date": "2026",
+      "awarder": "autoPET V Challenge · MICCAI 2026",
+      "url": "https://www.autopet.org/autopetv.html",
+      "summary": "Competed as the sole member of FightTumor. Built a GPT-agent-driven workflow in which agents implemented the code and executed 100+ experiments on a single RTX 5090."
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "autoPET V · FightTumor",
+      "icon": "fa-solid fa-trophy",
+      "summary": "Solo entrant, ranked 3rd in both tasks. Built a GPT-agent-driven workflow in which agents implemented the code and executed 100+ experiments on a single RTX 5090.",
+      "keywords": ["PET/CT", "GPT agents", "100+ experiments"],
+      "url": "https://www.autopet.org/autopetv.html",
+      "linkLabel": "Challenge website"
+    },
+    {
+      "name": "CT Foundation-Model Benchmarking",
+      "icon": "fa-solid fa-chart-line",
+      "summary": "Coordinated the CVPR 2026 3DCTFM competition and worked on data splits, model runs, metrics, automated evaluation, and error analysis across anatomical regions at UHN.",
+      "keywords": ["3DCTFM", "Benchmarking", "Medical AI"]
+    },
+    {
+      "name": "Multi-Head nnU-Net",
+      "icon": "fa-solid fa-layer-group",
+      "summary": "Developed a Multi-Head nnU-Net framework for complex 3D tumor segmentation at UHN, alongside data-conversion agents and HPC/Slurm research tools.",
+      "keywords": ["3D segmentation", "nnU-Net", "Slurm"]
+    },
+    {
+      "name": "Clinical Note Generation",
+      "icon": "fa-solid fa-notes-medical",
+      "summary": "Contributing to a UHN prototype that combines referral letters, patient information, and processed text conversations into consultation notes. My work focuses on the text-conversation input.",
+      "keywords": ["Prototype", "Clinical text", "Medical AI"]
+    },
+    {
+      "name": "Research Agents & RAG",
+      "icon": "fa-solid fa-robot",
+      "summary": "Extended Dify agent tools and built domain-specific retrieval workflows at XtalPi, supporting literature review and data analysis for life-sciences research.",
+      "keywords": ["Dify", "RAG", "PostgreSQL"]
+    },
+    {
+      "name": "AI-Assisted Compliance",
+      "icon": "fa-solid fa-diagram-project",
+      "summary": "Built a Neo4j relationship network for design-control documents and an AI-assisted compliance-report platform at SpringBorne, connecting regulatory research with practical software tools.",
+      "keywords": ["Neo4j", "Medical devices", "Report automation"],
+      "url": "https://www.springborne.com/blog/blog-post-title-one-k8tjn",
+      "linkLabel": "Related report"
+    }
+  ],
+  "publications": [
+    {
+      "name": "abundanceR: A novel method for estimating wildlife abundance based on distance sampling and species distribution models.",
+      "publisher": "Land, 11, 660",
+      "releaseDate": "2022",
+      "url": "https://doi.org/10.3390/land11050660",
+      "summary": "Li, X., Li, N., Li, B., Sun, Y., & Gao, E."
+    },
+    {
+      "name": "Deeply digging the interaction effect in multiple linear regressions using a fractional-power interaction term.",
+      "publisher": "MethodsX, 7, 101067",
+      "releaseDate": "2020",
+      "url": "https://doi.org/10.1016/j.mex.2020.101067",
+      "summary": "Li, X. H., Li, B., Wang, G. M., Zhan, X. J., & Holyoak, M."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Medical AI & Evaluation",
+      "keywords": ["3D medical-image segmentation", "nnU-Net", "Computer vision", "Foundation-model benchmarking", "Error analysis"]
+    },
+    {
+      "name": "Agents & Research Automation",
+      "keywords": ["LLM agents", "RAG", "Dify", "Agent toolsets", "HPC / Slurm"]
+    },
+    {
+      "name": "Programming & Data",
+      "keywords": ["Python (5+ years of use)", "SQL", "API services", "Data pipelines", "Neo4j", "Java", "C/C++ (coursework and small projects)"]
     }
   ]
 }

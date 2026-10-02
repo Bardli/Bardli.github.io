@@ -18,7 +18,9 @@ layout: default
 
       <h1 class="hero-name" id="hero-name">
         {% if site.title == 'blank' %}
-          {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
+          {{ site.first_name }}
+          {{ site.middle_name }}
+          {{ site.last_name }}
         {% else %}
           {{ site.title }}
         {% endif %}
@@ -29,9 +31,15 @@ layout: default
       {% endif %}
 
       <div class="typing-container">
-        <span class="typing-text" id="typing-text"></span>
+        <span class="typing-text" id="typing-text">Medical AI</span>
         <span class="typing-cursor"></span>
       </div>
+      <nav class="hero-actions" aria-label="Profile links">
+        <a class="hero-action hero-action-primary" href="{{ '/cv/' | relative_url }}">View CV</a>
+        <a class="hero-action" href="{{ '/assets/pdf/Baidu_Li_Resume_ZH.pdf' | relative_url }}" lang="zh">中文简历 PDF</a>
+        <a class="hero-action" href="#featured-work">Selected work</a>
+        <a class="hero-action" href="#contact">Contact</a>
+      </nav>
     </div>
   </div>
 
@@ -49,7 +57,7 @@ layout: default
     <!-- Impact Stats -->
     {% if page.impact_stats and page.impact_stats.enabled %}
       <div class="fancy-section scroll-reveal">
-        <h2 class="fancy-section-heading">Impact</h2>
+        <h2 class="fancy-section-heading">At a glance</h2>
         {% include impact_stats.liquid %}
       </div>
     {% endif %}
@@ -65,7 +73,7 @@ layout: default
     <!-- Featured Work -->
     {% if page.featured_projects and page.featured_projects.enabled %}
       <div class="fancy-section scroll-reveal">
-        <h2 class="fancy-section-heading">Featured Work</h2>
+        <h2 class="fancy-section-heading" id="featured-work">Featured Work</h2>
         {% include featured_projects.liquid %}
       </div>
     {% endif %}
@@ -119,7 +127,7 @@ layout: default
     <!-- Contact / Social -->
     {% if page.social %}
       <div class="fancy-section scroll-reveal fancy-contact">
-        <h2 class="fancy-section-heading">Contact</h2>
+        <h2 class="fancy-section-heading" id="contact">Contact</h2>
         <div class="contact-icons">{% include social.liquid %}</div>
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>

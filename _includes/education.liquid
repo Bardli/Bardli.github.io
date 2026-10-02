@@ -1,21 +1,18 @@
 <div class="education-grid">
-  <div class="education-card spotlight-card stagger-reveal">
-    <div class="education-icon">🎓</div>
-    <div class="education-content">
-      <h3 class="education-degree">MEng Biomedical Engineering</h3>
-      <span class="education-school">University of Toronto</span>
-      <span class="education-gpa">GPA: 3.8 / 4.0</span>
-      <p class="education-highlights">Medical Imaging & Computer Vision focus. Research in 3D segmentation and clinical AI applications.</p>
+  {% for degree in site.data.resume.education %}
+    <div class="education-card spotlight-card stagger-reveal">
+      <div class="education-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="education-content">
+        <h3 class="education-degree">{{ degree.studyType }} · {{ degree.area }}</h3>
+        <span class="education-school">{{ degree.institution }}</span>
+        <span class="education-gpa">
+          {{- degree.startDate | append: '-01' | date: '%b %Y' }} – {{ degree.endDate | append: '-01' | date: '%b %Y' -}}
+        </span>
+        {% if degree.score %}
+          <p class="education-highlights">GPA: {{ degree.score }}</p>
+        {% endif %}
+        <p class="education-highlights">{{ degree.courses | join: ' · ' }}</p>
+      </div>
     </div>
-  </div>
-
-  <div class="education-card spotlight-card stagger-reveal">
-    <div class="education-icon">🎓</div>
-    <div class="education-content">
-      <h3 class="education-degree">BSc Honours Computer Science</h3>
-      <span class="education-school">York University</span>
-      <span class="education-gpa">First Class Standing</span>
-      <p class="education-highlights">LURA Research Award recipient. Dean's Scholarship. CubeSat mission contributor.</p>
-    </div>
-  </div>
+  {% endfor %}
 </div>

@@ -6,14 +6,14 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Baidu
 middle_name:
 last_name: Li
-contact_note: Feel free to reach out via email — I'm always open to collaboration and new opportunities.
+contact_note: Open to medical AI research and engineering opportunities in Beijing, with Hangzhou also considered. Get in touch for collaboration or a conversation about the work.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Baidu Li — ML Engineer advancing the frontiers of Medical AI
+  Baidu Li — Medical AI engineer at UHN AI Hub. 3D segmentation, CT foundation-model evaluation, and agent-driven research.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: Machine-learning, Data-Science, Software-Engineer # add your own keywords or leave empty
+keywords: Medical-AI, Medical-Imaging, Foundation-Models, Agents, nnU-Net, Benchmarking # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🧑‍💻 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -46,7 +46,7 @@ repo_trophies:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
@@ -120,13 +120,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+external_sources: []
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -186,6 +180,17 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  - _pages/blog.md
+  - _pages/books.md
+  - _pages/dropdown.md
+  - _pages/profiles.md
+  - _pages/teaching.md
+  - _pages/news.md
+  - _posts/
+  - _books/
+  - _news/
+  - _projects/
+  - assets/jupyter/
   - purgecss.config.js
   - README.md
   - readme_preview/
