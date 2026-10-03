@@ -4,7 +4,7 @@
     "label": "Machine Learning Engineer · Medical AI",
     "email": "baidu_li_2001@163.com",
     "url": "https://bardli.github.io/",
-    "summary": "Biomedical engineering and computer science background, with experience in 3D medical imaging, foundation-model evaluation, LLM agents, RAG, and research automation.",
+    "summary": "Biomedical engineering and computer science background, with experience in 3D medical imaging, model interpretability, foundation-model evaluation, LLM agents, RAG, and research automation.",
     "profiles": [
       {
         "network": "GitHub",
@@ -112,6 +112,14 @@
       "keywords": ["PET/CT", "GPT agents", "100+ experiments"],
       "url": "https://www.autopet.org/autopetv.html",
       "linkLabel": "Challenge website"
+    },
+    {
+      "name": "From Pixels to Patients",
+      "icon": "fa-solid fa-microscope",
+      "summary": "Co-authored an interactive lung-CT interpretability tutorial listed in the MICCAI Educational Challenge 2026 library. Compared seven attribution approaches, including a mean-activation baseline, on five LUNA25 examples using a published JSC model, with real 3D feature visualizations, lesion-localization metrics, and reproducibility records.",
+      "keywords": ["MICCAI MEC 2026", "Explainable AI", "Lung CT"],
+      "url": "https://bardli.github.io/pixels-to-patients/",
+      "linkLabel": "Explore tutorial"
     },
     {
       "name": "CT Foundation-Model Benchmarking",
