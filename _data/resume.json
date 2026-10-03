@@ -116,7 +116,7 @@
     {
       "name": "From Pixels to Patients",
       "icon": "fa-solid fa-microscope",
-      "summary": "Co-authored an interactive lung-CT interpretability tutorial listed in the MICCAI Educational Challenge 2026 library. Compared seven attribution approaches, including a mean-activation baseline, on five LUNA25 examples using a published JSC model, with real 3D feature visualizations, lesion-localization metrics, and reproducibility records.",
+      "summary": "Independently authored an interactive lung-CT interpretability tutorial listed in the MICCAI Educational Challenge 2026 library. Compared seven attribution approaches, including a mean-activation baseline, on five LUNA25 examples using a published JSC model, with real 3D feature visualizations, lesion-localization metrics, and reproducibility records.",
       "keywords": ["MICCAI MEC 2026", "Explainable AI", "Lung CT"],
       "url": "https://bardli.github.io/pixels-to-patients/",
       "linkLabel": "Explore tutorial"

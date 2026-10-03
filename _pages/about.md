@@ -30,6 +30,6 @@ I am a **Machine Learning Engineer at UHN AI Hub**, working on 3D medical-image 
 
 As the sole member of **FightTumor**, I ranked **3rd in both tasks of autoPET V**. I built a GPT-agent-driven workflow in which agents implemented the code and executed **100+ experiments on a single RTX 5090**.
 
-I also co-authored [**From Pixels to Patients**](https://bardli.github.io/pixels-to-patients/), an interactive guide to attribution methods on lung CT, listed in the [**MICCAI Educational Challenge 2026 library**](https://miccai-sb.github.io/materials.html?year=2026&search=Baidu). The project connects real model activations with quantitative evaluation and reproducible experiments.
+I independently authored [**From Pixels to Patients**](https://bardli.github.io/pixels-to-patients/), an interactive guide to attribution methods on lung CT, with review and support from Meng Wei and Jun Ma. The tutorial is listed in the [**MICCAI Educational Challenge 2026 library**](https://miccai-sb.github.io/materials.html?year=2026&search=Baidu) and connects real model activations with quantitative evaluation and reproducible experiments.
 
 Previously, I developed research-agent tools and RAG workflows at **XtalPi** and worked on medical-device compliance and AI-assisted documentation at **SpringBorne Life Science**. I hold an **MEng in Biomedical Engineering from the University of Toronto** and a **BSc in Computer Science from York University**. My long-term focus is building useful medical AI products with clinical and engineering teams.
